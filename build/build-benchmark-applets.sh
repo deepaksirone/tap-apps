@@ -33,7 +33,7 @@ then
 	exit 2
 fi
 
-export RULE_LIB_DIR=$1/output
+#export RULE_LIB_DIR=$1/output
 
 for file in $1/*;
 do
@@ -41,18 +41,15 @@ do
 		f_name=$(basename $file)
 		echo "Building $f_name";
 		pushd $1
-		ssc --riscv $f_name
+			ssc --riscv $f_name
 		popd
 
-		rm -rf build/src/encrypted_rule/enc_rule*
-		mkdir -p build
-		pushd ./build
-			cmake ..
-	  		make enc_rule_package
-			make rule_process_package
-	        	cp src/encrypted_rule/enc_rule.ke $2/enc_rule_$f_name.ke
-			cp src/rule_process/rule_process.ke $2/rule_process_$f_name.ke
-		popd
+		rm -rf ./src/encrypted_rule/enc_rule*
+		cmake ..
+	  	make enc_rule_package
+		make rule_process_package
+	        cp ./src/encrypted_rule/enc_rule.ke $2/enc_rule_$f_name.ke
+		cp ./src/rule_process/rule_process.ke $2/rule_process_$f_name.ke
 	fi
 done
 
