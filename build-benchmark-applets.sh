@@ -34,6 +34,7 @@ then
 fi
 
 #export RULE_LIB_DIR=$1/output
+mkdir -p build
 
 for file in $1/*;
 do
@@ -44,12 +45,14 @@ do
 			ssc --riscv $f_name
 		popd
 
-		rm -rf ./src/encrypted_rule/enc_rule*
-		cmake ..
-	  	make enc_rule_package
-		make rule_process_package
-	        cp ./src/encrypted_rule/enc_rule.ke $2/enc_rule_$f_name.ke
-		cp ./src/rule_process/rule_process.ke $2/rule_process_$f_name.ke
+		pushd ./build
+			rm -rf ./src/encrypted_rule/enc_rule*
+			cmake ..
+	  		make enc_rule_package
+			make rule_process_package
+	        	cp ./src/encrypted_rule/enc_rule.ke $2/enc_rule_$f_name.ke
+			cp ./src/rule_process/rule_process.ke $2/rule_process_$f_name.ke
+		popd
 	fi
 done
 
