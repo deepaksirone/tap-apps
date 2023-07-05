@@ -1,0 +1,1 @@
+Monzo.potDeposit.setAmount(String(parseFloat(Stripe.newTransfer.Amount) / 2))

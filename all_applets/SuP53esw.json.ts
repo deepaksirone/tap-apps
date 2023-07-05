@@ -1,0 +1,1 @@
+Evernote.appendChecklistItem.setTitle(Meta.currentUserTime.format("YYYYMMDD") + "TODO")

@@ -1,0 +1,1 @@
+Wordpress.createPhotoPostWp.setTitle(Instagram.anyNewPhotoByYou.CreatedAt)

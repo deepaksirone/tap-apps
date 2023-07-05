@@ -1,0 +1,1 @@
+if (Trigger.DeviceName.indexOf("Gear") == -1) {AndroidDevice.setDeviceVolume.skip("Déconnection non due à la montre")}

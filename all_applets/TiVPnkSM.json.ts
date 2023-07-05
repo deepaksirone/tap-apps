@@ -1,0 +1,2 @@
+let User = Trigger.LinkToProfile.replace(/(https?\:\/\/twitter\.com\/)/g, '@');
+Twitter.postNewTweet.setTweet("Hey " + User + ", thanks for following me! Here is a quick video I made just to say hi! https://youtu.be/5_9tEBfH3fw");

@@ -1,0 +1,2 @@
+var newPhotoURL = Flickr.newFavoritePublicPhoto.SourceUrl.replace("_b.jpg","_c.jpg");
+GoogleSheets.appendToGoogleSpreadsheet.setFormattedRow("image ||| x ||| ||| |||"+newPhotoURL+"|||"+Flickr.newFavoritePublicPhoto.SourceUrl+"||| ||| ||| ||| # ||| |||"+Flickr.newFavoritePublicPhoto.Title);

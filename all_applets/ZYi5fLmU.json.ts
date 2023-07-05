@@ -1,0 +1,1 @@
+Evernote.appendToNote.setTitle(Meta.currentUserTime.format("YYYYMMDD"))

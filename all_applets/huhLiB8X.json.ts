@@ -1,0 +1,1 @@
+Hue.setBrightnessAllHue.setBrightness("80")

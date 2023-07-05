@@ -1,0 +1,1 @@
+// If Nytimes.newArticleMatchingSearch.Keywords does not contain any combination of "world" && "record" && "broken" || "breaks", Dominos.launchEasyOrder.skip()

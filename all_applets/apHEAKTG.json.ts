@@ -1,0 +1,2 @@
+let User = Trigger.LinkToProfile.replace(/(https?\:\/\/twitter\.com\/)/g, '@');
+Twitter.postNewTweet.setTweet("Hello " + User + ", thanks for following me! Here is a quick link to a simple income stream website. There are tutorials, support and is FREE to sign up to. Visit http://www.myfirstcommissions.co.nf  .  If this is not something you are interested in... no problem.  Thanks again for the follow");

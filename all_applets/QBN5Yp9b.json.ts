@@ -1,0 +1,2 @@
+Twitter.newTweetByYou.Text
+Twitter.newTweetByYou.LinkToTweet

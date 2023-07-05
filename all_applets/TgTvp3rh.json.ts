@@ -1,0 +1,1 @@
+    FacebookPages.createStatusMessagePage.skip(Feed.newFeedItem.EntryTitle)

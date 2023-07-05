@@ -1,0 +1,1 @@
+// Hue.setColorFromImageAllHue.setImageUrl("http://localhost:8000/DScompbg.jpg")

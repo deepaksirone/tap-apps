@@ -1,0 +1,2 @@
+let User = Trigger.LinkToProfile.replace(/(https?\:\/\/twitter\.com\/)/g, '@');
+Twitter.postNewTweet.setTweet("Hey there " + User + ", thanks for following our podcast! Can you let me know your thoughts about our latest episode we did just for you? Listen here: http://cryptoandblockchaintalk.com/ Like our podcast? Give us 5 stars in iTunes or Stitcher :)");
