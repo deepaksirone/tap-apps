@@ -4,8 +4,10 @@ var album     = 'Instagram Photos',
     str       = GoogleDrive.anyNewPhoto.Filename.replace( '.jpg', '' ),
     link      = 'https://www.instagram.com/donnykluane',
     meta      = str.split( '|' ),
-    title     = meta[ 0 ].trim(),
-	  desc      = meta[ 1 ].trim(),
+    meta_0: string = meta[0],
+    title     = meta_0.trim(),
+    meta_1: string = meta[1],
+    desc: string      = meta_1.trim(),
     hashtags  = str.match( /#[a-zA-Z0-9_.-]+/g ).join( " " ),
     split     = desc.split( " #" ),
     notags    = desc;
@@ -13,7 +15,8 @@ var album     = 'Instagram Photos',
 // Get Pure description without trailing tags for FB posts
 for( let i = split.length; i > 1; i-- )
 {
-  if( split[ (i - 1) ].indexOf( " " ) > -1 )
+  let split_i: string = split[i - 1];
+  if( split_i.indexOf( " " ) > -1 )
   {
     notags = split.slice( 0, i ).join( " #" );
   }

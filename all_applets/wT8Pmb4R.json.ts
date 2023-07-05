@@ -1,3 +1,3 @@
-if (Date.parse(Meta.currentUserTime.utc().format()) < Date.parse(Weather.currentWeather[0].SunsetAt)) {
+if (Date.parse(Meta.currentUserTime.utc().format()) < Date.parse(Weather.currentWeather.SunsetAt)) {
 Lifx.turnOn.skip();
 }

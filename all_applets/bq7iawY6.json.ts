@@ -5,8 +5,10 @@ var album     = 'Instagram Photos',
     insta     = "<br><br><a href='https://www.instagram.com/yukon_strong'>via Instagram</a>",
 		found     = false,
     meta      = str.split( '|' ),
-    title     = meta[ 0 ].trim(),
-	  desc      = meta[ 1 ].trim(),
+    meta_0: string = meta[0],
+    title     = meta_0.trim(),
+    meta_1: string = meta[1],
+    desc      = meta_1.trim(),
     hashtags  = str.match( /#[a-zA-Z0-9_.-]+/g ).join( " " ),
     tags      = hashtags.replace( /#/g, ',' ),
     split     = desc.split(" #"),
@@ -15,7 +17,8 @@ var album     = 'Instagram Photos',
 // Strip out true tags
 for(let i = split.length; i > 1; i--)
 {
-  if(split[i - 1].indexOf(" ") > -1)
+  let split_i: string = split[i - 1];
+  if(split_i.indexOf(" ") > -1)
   {
     notags = split.slice(0, i).join(" #");
   }

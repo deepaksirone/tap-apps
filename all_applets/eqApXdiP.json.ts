@@ -1,4 +1,4 @@
-var tweetBody = [Feed.newFeedItem.EntryTitle];
+var tweetBody: Array<string> = [Feed.newFeedItem.EntryTitle];
 var subreddit = Feed.newFeedItem.EntryUrl.match(/\/r\/([a-z_\-]+)\//i);
 
 if (subreddit)

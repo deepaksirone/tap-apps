@@ -10,12 +10,14 @@ if (title.charAt(0) == '[') {
     title = title.slice(closingBracket + 1);
   }
 }
-title = title.split('[')[0].trim();
+var title_1: string = title.split('[')[0];
+title = title_1.trim()
 
 // Attempt to split the title into the artist and song name:
 var separators: Array<string> = [' -- ', ' - - ', '--', '- -', ' — ', ' – ', ' - ', '—', '–', '-'];
+var split: Array<string> = []
 for (var i = 0; i < separators.length; i++) {
-  var split = title.split(separators[i]);
+  split = title.split(separators[i]);
   if (split.length == 2) {break;}
 }
 
@@ -26,8 +28,10 @@ if (i == separators.length) {
 
 // Otherwise, search for the artist and song name separately:
 else {
-  var artist = split[0].trim();
-  var song = split[1].trim();
+  let split_0: string = split[0];
+  var artist = split_0.trim();
+  let split_1: string = split[1];
+  var song = split_1.trim();
 
   if (artist.slice(-1) == ')') { // (remove trailing parentheses)
     var openingParenthesis = artist.lastIndexOf('(');
