@@ -52,7 +52,8 @@ do
 		popd
 
 		pushd ./build
-			rm -rf ./src/encrypted_rule/enc_rule*
+			rm -rf $(pwd)/src/encrypted_rule/enc_rule*
+			rm -rf $(pwd)/src/rule_process/rule_process*
 			cmake ..
 	  		make enc_rule_package
 			make rule_process_package
